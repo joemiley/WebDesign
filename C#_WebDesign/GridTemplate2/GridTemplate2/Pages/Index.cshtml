@@ -1,0 +1,375 @@
+﻿@page
+
+const { Chart } = require("../wwwroot/js/chartjs");
+
+const { Chart } = require("../wwwroot/js/chartjs");
+@model IndexModel
+colorwData["Title"] = "Home page";
+}
+
+
+<div class="maincontent-wrapper">
+
+
+    <div class="card-grid">
+        <div class="card">
+            <canvas id="chart-line" style="background-color:#fff; color:#fff; width:100%; height:140vh;"></canvas>
+                <script>
+                    const labels = ['January','February','March','April','May','June'];
+
+                    const data = {
+                    labels: labels,
+                    datasets: [{
+                    label: 'My First dataset',
+                    backgroundColor: 'rgb(255, 99, 132)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: [1, 50, 5, 2, 20, 30, 45],
+                    }]};
+
+                    const configLine = {
+                    type: 'line',
+                    data: data,
+                    options: {}
+                    };
+                </script>
+                <script>
+                    const myChart = new Chart(
+                    document.getElementById('chart-line'),
+                    configLine
+                    );
+                </script>
+        </div>
+
+        <div class="card">
+            <canvas id="chart-polar" style="background-color:#fff; height:50px; width:50vw; padding:35px;"></canvas>
+                <script>
+
+                const dataPolar = {
+                    labels: ['Red','Green','Yellow','Grey','Blue'],
+                    datasets: [{
+                    label: 'My First Dataset',
+                    data: [11, 16, 7, 3, 14],
+                    backgroundColor: [
+                    'rgb(255, 99, 132)',
+                    'rgb(75, 192, 192)',
+                    'rgb(255, 205, 86)',
+                    'rgb(201, 203, 207)',
+                    'rgb(54, 162, 235)'
+                    ]
+                    }]
+                    };
+
+                    const configPolar = {
+                      type: 'polarArea',
+                      data: dataPolar,
+                      options:{ }
+                    };
+                </script>
+                <script>
+                    const myChartPolar = new Chart(
+                    document.getElementById('chart-polar'),
+                    configPolar);
+                </script>
+        </div>
+
+        <div class="card">
+            <canvas id="chart-bar" style="background-color:#fff; color:#fff; width:100%; height:140vh;"></canvas>
+                <script>
+                    const labelsBar = ['January','February','March','April','May','June'];
+
+                    const dataBar = {
+                    labels: labelsBar,
+                    datasets: [{
+                    label: 'My First dataset',
+                    backgroundColor: 'rgb(255, 99, 132)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: [1, 50, 5, 2, 20, 30, 45],
+                    }]
+                    };
+
+                    const configBar = {
+                    type: 'bar',
+                    data: dataBar,
+                    options: {}
+                    };
+                </script>
+                <script>
+                    const myChartBar = new Chart(
+                    document.getElementById('chart-bar'),
+                    configBar
+                    );
+                </script>
+        </div>
+
+        <div class="card">
+            <canvas id="chart-scatter" style="background-color:#fff; color:#fff; width:100%; height:100vh;"></canvas>
+                <script>
+                    const dataScatter = {
+                    datasets: [{
+                    label: 'My First dataset',
+                    backgroundColor: 'rgb(255, 99, 132)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: [{x: 1,y: 7.5},{x: 1.5,y: 1.5},{x: 2,y: 3.5},{x: 2.5,y: 2.5}, {x: 3,y: 8}, {x: 3.5,y: 4}, {x: 4,y: 5.5}]
+                    }]};
+
+                    const configScatter = {
+                    type: 'scatter',
+                    data: dataScatter,
+                    opions: {}
+                    };
+                </script>
+                <script>
+                    const myChartScatter = new Chart(
+                    document.getElementById('chart-scatter'),
+                    configScatter
+                    );
+                </script>
+        </div>
+
+        <div class="card card-wide3 card-tall"
+        >
+        <div class="table">
+        <h5> 5.Pack Information </h5>
+        <table style="width:100%; height:100%;">
+            <tr>
+            <th>PLU ID</th>
+            <th>PLU Name</th>
+            <th>Enabled</th>
+            <th>Template</th>
+            <th>Weighing Mode</th>
+            <th>Group</th>
+            </tr>
+            <tr>
+            <td>1</td>
+            <td>Standard 80x66</td>
+            <td>Yes</td>
+            <td>Default</td>
+            <td>Catch Weight</td>
+            <td>Standard</td>
+            </tr>
+            <tr>
+            <td>2</td>
+            <td>cassette 80x66</td>
+            <td>Yes</td>
+            <td>Default</td>
+            <td>Catch Weight</td>
+            <td>Casset</td>
+            </tr>
+            <tr>
+            <td>3</td>
+            <td>Standard 80x66</td>
+            <td>Yes</td>
+            <td>Default</td>
+            <td>Catch Weight</td>
+            <td>Standard</td>
+            </tr>
+            <tr>
+            <td>4</td>
+            <td>Standard 80x66</td>
+            <td>Yes</td>
+            <td>Default</td>
+            <td>Catch Weight</td>
+            <td>Standard</td>
+            </tr>
+        </table>
+        </div>
+        </div>
+
+        <div class="card">
+        6.
+        <button style="width:160px; height:40px;">Edit</button>
+        <button style="width:160px; height:40px;">Add</button>
+        <button style="width:160px; height:40px;">Copy</button>
+        </div>
+
+        <div
+        class="card"
+        >
+        7.
+        <button style="width:160px; height:40px;">Delete</button>
+        <button style="width:160px; height:40px;">Save</button>
+        <button style="width:160px; height:40px;">Cancel</button>
+
+        </div>
+
+        <div
+        class="card card-wide"
+        >
+        <h5 style="color:#F2F2F2;">Search:</h5>
+        <select style="width:180px; height:40px; text-align:center; margin:4px;" name="comboBox" id="comboBox">
+            <option >ID</option>
+            <option >Text</option>
+            <option >Text Exclude</option>
+            <option >Cassette</option>
+            <option >Standard</option>
+        </select>
+        <input style="width:100%; height:40px;"/>
+        <button style="width:160px; height:40px; margin:4px;">Go</button>
+        8.
+
+        </div>
+        <div
+        class="card"
+        style="background-image:url('https://images.unsplash.com/photo-1583532452513-a02186582ccd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80')"
+        >
+        9.
+        </div>
+
+        <div
+        class="card"
+        style="background-image:url('https://images.unsplash.com/photo-1583445013765-46c20c4a6772?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80')"
+        >
+        10.
+        </div>
+
+        <div
+        class="card card-wide"
+        style="background-image:url('https://images.unsplash.com/photo-1583562835057-a62d1beffbf3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=949&q=80')"
+        >
+        11.
+        </div>
+
+        <div
+        class="card"
+        style="background-image:url('https://images.unsplash.com/photo-1583483425010-c566431a7710?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80')"
+        >
+        12.
+        </div>
+
+        <div
+        class="card"
+        style="background-image:url('https://images.unsplash.com/photo-1583500557349-fb5238f8d946?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1949&q=80')"
+        >
+        13.
+        </div>
+
+        <div
+        class="card"
+        style="background-image:url('https://images.unsplash.com/photo-1583468323330-9032ad490fed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1955&q=80')"
+        >
+        14.
+        </div>
+
+        <div
+        class="card"
+        style="background-image:url('https://images.unsplash.com/photo-1583425423320-2386622cd2e4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1980&q=80')"
+        >
+        15.
+        </div>
+
+        <div
+        class="card"
+        style="background-image:url('https://images.unsplash.com/photo-1583518257225-f9a8081f6a84?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80')"
+        >
+        16.
+        </div>
+
+    </div>
+</div>
+
+<div class="sidebar">
+    @*<img src="~/images/sidebarLogo.png" width="208px;" height="102px;" style="padding-bottom:10px; padding-top:20px; border-bottom:2px solid #F2F2F2;">*@
+   
+        <a class="nav-link dropdown-btn" style="color:#F2F2F2; margin-top:60px;">Programming</a>
+        <div class="dropdown-container">
+            <a style="color:#F2F2F2; text-align:left;" href="#">PLU's'</a>
+            <a style="color:#F2F2F2; text-align:left;" href="#">Barcodes</a>
+            <a style="color:#F2F2F2; text-align:left;" href="#">Labels</a>
+            <a style="color:#F2F2F2; text-align:left;" href="#">Shops</a>
+            <a style="color:#F2F2F2; text-align:left;" href="#">Customers</a>
+            <a style="color:#F2F2F2; text-align:left;" href="#">Traceability instance</a>
+            <a style="color:#F2F2F2; text-align:left;" href="#">Traceability lookup</a>
+            <a style="color:#F2F2F2; text-align:left;" href="#">Nutrifacts</a>
+            <a style="color:#F2F2F2; text-align:left;" href="#">Ingredients</a>
+            <a style="color:#F2F2F2; text-align:left;" href="#">Text Library</a>
+            <a style="color:#F2F2F2; text-align:left;" href="#">Weight Banding</a>
+            <a style="color:#F2F2F2; text-align:left;" href="#">Image Library</a>
+        </div>
+
+        <a class="nav-link dropdown-btn" style="color:#F2F2F2;">Management</a>
+        <div class="dropdown-container">
+            <a style="color:#F2F2F2; text-align:left;" href="#">Currency Menu</a>
+            <a style="color:#F2F2F2; text-align:left;" href="#">Total Library</a>
+            <a style="color:#F2F2F2; text-align:left;" href="#">Group Filter Setup</a>
+            <a style="color:#F2F2F2; text-align:left;" href="#">Cooking Time Setup</a>
+            <a style="color:#F2F2F2; text-align:left;" href="#">Tray Library</a>
+            <a style="color:#F2F2F2; text-align:left;" href="#">Label Format Editor</a>
+            <a style="color:#F2F2F2; text-align:left;" href="#">Custom FIeld Editor</a>
+            <a style="color:#F2F2F2; text-align:left;" href="#">Weight Parameteres</a>
+            <a style="color:#F2F2F2; text-align:left;" href="#">Allergens</a>
+            <a style="color:#F2F2F2; text-align:left;" href="#">Assign PLU</a>
+        </div>
+
+        <a class="nav-link dropdown-btn" style="color:#F2F2F2;">Service</a>
+        <div class="dropdown-container">
+            <a style="color:#F2F2F2; text-align:left;" href="#">Settings</a>
+            <a style="color:#F2F2F2; text-align:left;" href="#">Rejector Setup</a>
+        </div>
+
+        <a class="nav-link dropdown-btn" style="color:#F2F2F2;">Reports</a>
+        <div class="dropdown-container">
+            <a style="color:#F2F2F2; text-align:left;" href="#">PLU Report</a>
+            <a style="color:#F2F2F2; text-align:left;" href="#">Per Pack Report</a>
+            <a style="color:#F2F2F2; text-align:left;" href="#">Emark Batch Report</a>
+            <a style="color:#F2F2F2; text-align:left;" href="#">Emark Batch Report 2</a>
+            <a style="color:#F2F2F2; text-align:left;" href="#">Emark Batch Report 3</a>
+            <a style="color:#F2F2F2; text-align:left;" href="#">Emark Batch Report 4</a>
+            <a style="color:#F2F2F2; text-align:left;" href="#">Emark Batch Report 5</a>
+            <a style="color:#F2F2F2; text-align:left;" href="#">Log Report</a>
+            <a style="color:#F2F2F2; text-align:left;" href="#">Real Time Status</a>
+            <a style="color:#F2F2F2; text-align:left;" href="#">Giveaway Reports</a>
+            <a style="color:#F2F2F2; text-align:left;" href="#">Productivity Reports</a>
+        </div>
+
+        <a class="nav-link dropdown-btn" style="color:#F2F2F2;">System</a>
+        <div class="dropdown-container">
+            <a style="color:#F2F2F2; text-align:left;" href="#">Catagories</a>
+            <a style="color:#F2F2F2; text-align:left;" href="#">System Fields</a>
+            <a style="color:#F2F2F2; text-align:left;" href="#">Template Setup</a>
+            <a style="color:#F2F2F2; text-align:left;" href="#">System Data</a>
+            <a style="color:#F2F2F2; text-align:left;" href="#">Security menu</a>
+            <a style="color:#F2F2F2; text-align:left;" href="#">Date Formats</a>
+            <a style="color:#F2F2F2; text-align:left;" href="#">Logs</a>
+        </div>
+
+        <a class="nav-link dropdown-btn" style="color:#F2F2F2;">Scheduling</a>
+        <div class="dropdown-container">
+            <a style="color:#F2F2F2; text-align:left;" href="#">Tasts</a>
+            <a style="color:#F2F2F2; text-align:left;" href="#">Logs</a>
+            <a style="color:#F2F2F2; text-align:left;" href="#">Authorisation</a>
+        </div>
+
+        <a class="nav-link dropdown-btn" style="color:#F2F2F2;">WVW admin</a>
+        <div class="dropdown-container">
+            <a style="color:#F2F2F2; text-align:left;" href="#">Users</a>
+            <a style="color:#F2F2F2; text-align:left;" href="#">Security</a>
+            <a style="color:#F2F2F2; text-align:left;" href="#">Web Config Password</a>
+            <a style="color:#F2F2F2; text-align:left;" href="#">Replication</a>
+            <a style="color:#F2F2F2; text-align:left;" href="#">Themes</a>
+        </div>
+
+        <a class="nav-link dropdown-btn" style="color:#F2F2F2;">Logout</a>
+
+</div>
+
+<script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++){
+    var dropdownContent = dropdown[i].nextElementSibling;
+    dropdownContent.style.display = "none";
+    dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });}
+
+
+</script>
+

@@ -1,0 +1,193 @@
+﻿
+/*
+
+colour theme:
+#4EA69D
+#5EBFB5
+#458C85
+#A7D9D4
+#F2F2F2
+
+(these colours are taken off the DIGI geometric background) 
+
+*/
+
+.layout-wrapper {
+    position: fixed;
+    background-image: url("../../images/world2.png");
+    background-color: #000;
+    width: 105%;
+    height: 105%;
+    opacity: 1;
+    z-index: 1;
+}
+
+.sidebar {
+    width: 245px;
+    text-align: center;
+    background-color: #4EA69D !important;
+    position: fixed;
+    top: 0px;
+    height: 100vh;
+    overflow: auto;
+    padding: 1em;
+/*    box-shadow: 3px 3px 6px 0px;*/
+    z-index: 3 !important;
+    
+}
+
+    /* Sidebar links */
+    .sidebar a {
+        display: block;
+        padding: 20px;
+        text-decoration: none;
+        text-align:center;
+    }
+
+        /* Active/current link */
+        .sidebar a.active {
+            background-color: #00c5b4;
+            color: #F2F2F2;
+        }
+
+        /* Links on mouse-over */
+        .sidebar a:hover:not(.active) {
+            background-color: #00c5b4;
+            color: #F2F2F2;
+            border-radius: 15px;
+            width:190px;
+            padding-top:7px;
+        }
+
+/*---------------------------------------------added-------------------------------------------------------------------------*/
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    border-radius: 15px;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+    display: none;
+    background-color: #458C85;
+    border-radius: 15px;
+    width: 200px;
+    padding-left: 5px;
+    padding-top: 6px;
+    color: #F2F2F2;
+    text-align: left;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+        .sidenav a {
+            font-size: 18px;
+        }
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------------*/
+.maincontent-wrapper {
+    position: absolute;
+    left: 270px;
+    top:15px;
+    width:80vw;
+}
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+.card {
+    padding: 7px;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    font-size: 1rem;
+    color: #000;
+    background-color: #4EA69f;
+    box-shadow: 1px 1px 5px 1px;
+    height: 100%;
+    width: 100%;
+    border-radius: 2px;
+    transition: all 500ms;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    z-index: 1 !important;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+.card-grid {
+    display: grid;
+    gap: 1.2rem;
+    /*grid-template-columns: repeat(auto-fit, minmax(140px, 240px));*/
+    grid-template-columns: repeat(auto-fit, minmax(20%,24%));
+    grid-auto-rows: 21%;
+}
+
+/* Medium screens */
+@media screen and (min-width: 600px) {
+
+
+    .card-wide {
+        grid-column: span 2 / auto;
+    }
+
+    .card-wide2 {
+        grid-column: span 3 / auto;
+    }
+
+    .card-wide3 {
+        grid-column: span 4 / auto;
+    }
+
+    .card-tall {
+        grid-row: span 2 / auto;
+    }
+
+    .card-tallest {
+        grid-row: span 3 / auto;
+    }
+
+}
+
+.table {
+    /*    background: #fff;*/
+    color: #F2F2F2;
+    width: 100%;
+    height: 90%;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    background: #120b13;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+/*    box-shadow: inset 0 0 5px grey;*/
+/*    border-radius: 10px;*/
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #458c85;
+    border-radius: 2px;
+}
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #458c85;
+    }
+
